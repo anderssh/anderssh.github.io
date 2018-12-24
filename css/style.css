@@ -13,8 +13,9 @@ th, td {
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
-.navbar {
-  padding: 50px;
+
+.mytitle {
+  padding: 50px
 }
 
 body {
