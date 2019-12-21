@@ -35,11 +35,12 @@
     </nav>
     <div class="container">
       <h1 class="mytitle">Dette er Ølsmakerorkesteret offisielle hjemmeside</h1>
+      <h2 class="ingress">Her finner du alle nedskrevne øltester utført av Ølsmakerorkesteret</h2>
       <div class="row">
         <div class="col-md-8">
           <table id="myTable">
             <tr>
-              <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+              <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
               <th onclick="sortTable(0)"><i class="fas fa-beer"></i>Ølnavn</th>
               <th onclick="sortTable(1)">Antall lepper</th>
             </tr>
@@ -119,15 +120,15 @@
             </tr>
             </tr>
             </tr>
-              
-          </table>  
+
+          </table>
           <script>
           function sortTable(n) {
             var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
             table = document.getElementById("myTable");
             switching = true;
             //Set the sorting direction to ascending:
-            dir = "asc"; 
+            dir = "asc";
             /*Make a loop that will continue until
             no switching has been done:*/
             while (switching) {
@@ -165,7 +166,7 @@
                 rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
                 switching = true;
                 //Each time a switch is done, increase this count by 1:
-                switchcount ++;      
+                switchcount ++;
               } else {
                 /*If no switching has been done AND the direction is "asc",
                 set the direction to "desc" and run the while loop again.*/
