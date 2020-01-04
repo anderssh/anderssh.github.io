@@ -17,7 +17,7 @@ include("../secret_info.php");
 $servername = "localhost";
 $username = USERNAME;
 $password = PASSWORD;
-$dbname   = "ol_orkester"
+$dbname   = "ol_orkester";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
