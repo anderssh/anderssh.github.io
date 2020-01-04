@@ -27,7 +27,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="/">Hjem</a></li>
-            <li><a href="/html/tester.html">Tester</a></li>
+            <li><a href="/html/tester.php">Tester</a></li>
             <li><a href="https://github.com/anderssh/anderssh.github.io">Kildekode</a></li>
             <li><a href="/html/galleri.html">Galleri</a></li>
           </ul>
