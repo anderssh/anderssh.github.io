@@ -74,6 +74,17 @@ if ($result->num_rows > 0) {
                     <th onclick="sortTable(0)"><i class="fas fa-beer"></i>Ølnavn</th>
                     <th onclick="sortTable(1)">Antall lepper</th>
                   </tr>
+                  <?php
+                  if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                      echo "<tr>\n";
+                      echo "<td>" . $row["beer_name"]. "</td>\n<td>" . $row["score"]. "</td>";
+                    }
+                  } else {
+                    echo "0 results";
+                  }
+                  ?>
                   <tr>
                     <td>Ringnes Juleøl</td>
                     <td>51</td>
