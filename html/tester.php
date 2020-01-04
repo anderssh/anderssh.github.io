@@ -13,7 +13,7 @@
 
   <body>
 <?php
-include("secret_info.php");
+include("../secret_info.php");
 $servername = "localhost";
 $username = USERNAME;
 $password = PASSWORD;
