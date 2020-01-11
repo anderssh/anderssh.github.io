@@ -1,4 +1,4 @@
-create table results(id INT AUTO_INCREMENT PRIMARY KEY, year INT,event VARCHAR(255) NOT NULL,beer_name VARCHAR(255),score FLOAT NOT NULL,volume FLOAT, alcohol_content FLOAT, description VARCHAR(255), color VARCHAR(255));
+create table results( d(255), color VARCHAR(255));
 
 insert into results(year,event,beer_name, score) VALUES(2018,'jul','Ringnes Juleøl',51),
 (2018,'jul','Brew Dog Santa Paws',56.75),
