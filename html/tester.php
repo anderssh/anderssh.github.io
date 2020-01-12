@@ -78,6 +78,9 @@ $result = $conn->query($sql);
                   ?>
                 </table>
               </div>
+            </div>
+          </div>
+        </button>
                 <script>
                 function sortTable(n) {
                   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
