@@ -68,7 +68,7 @@ $result = $conn->query($sql);
                   if ($result->num_rows > 0) {
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
-                      echo "<tr>\n";
+                      echo "<tr>\r\n";
                       echo "<td>" . $row["beer_name"]. "</td><td>" . $row["score"]. "</td>";
                       echo "<\tr>";
                     }
