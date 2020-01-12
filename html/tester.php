@@ -68,15 +68,29 @@ $result = $conn->query($sql);
                   if ($result->num_rows > 0) {
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
-                      echo "<tr>\n";
-                      echo "<td>" . $row["beer_name"]. "</td>\n<td>" . $row["score"]. "</td>";
-                      echo "<\tr>";
+                        echo . $row["beer_name"]. . $row["score"]. "<br>";
                     }
-                  } else {
+                } else {
                     echo "0 results";
-                  }
+                }
+                  #if ($result->num_rows > 0) {
+                  #  // output data of each row
+                  #  while($row = $result->fetch_assoc()) {
+                  #    echo "<tr>\r\n";
+                  #    echo "<td>" . $row["beer_name"]. "</td><td>" . $row["score"]. "</td>";
+                  #    echo "<\tr>";
+                  #  }
+                  #} else {
+                  #  echo "0 results";
+                  #}
                   ?>
                 </table>
+              </div>
+            </div>
+          </div>
+        </button>
+        </h2>
+      </div>
                 <script>
                 function sortTable(n) {
                   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
