@@ -62,7 +62,7 @@
           echo "<a href=/" . $row["image_url"]. ' target="_blank">';
           echo "<img src=/" . $row["image_url"]. ' alt="Lights" style="width:100%">';
           echo '<div class="caption">';
-          echo '<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>';
+          echo "<p>" . $row["beer_name"]. "</p>";
           echo "</div>";
           echo "</a>";
           echo "</div>";
