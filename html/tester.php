@@ -27,7 +27,7 @@ $conn -> set_charset("utf8");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql = "SELECT id, beer_name, score FROM results left join beers on results.beer_id = beers.id";
+$sql = "SELECT beer_name, score FROM results left join beers on results.beer_id = beers.id";
 
 $result = $conn->query($sql);
 
