@@ -11,239 +11,68 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-static-top">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Ølsmakerorkesteret</a>
-          </div>
-          <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="/">Hjem</a></li>
-              <li><a href="/html/tester.php">Tester</a></li>
-              <li class="active"><a href="/html/galleri.php">Galleri</a></li>
-              <li><a href="https://github.com/anderssh/anderssh.github.io">Kildekode</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </nav>
+  <?php
+  include("../secret_info.php");
+  $servername = "localhost";
+  $username = USERNAME;
+  $password = PASSWORD;
+  $dbname   = "ol_orkester";
+
+  // Create connection
+  $conn = new mysqli($servername, $username, $password, $dbname);
+  $conn -> set_charset("utf8");
+
+  // Check connection
+  if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+  }
+  $sql = "SELECT beer_name, image_url FROM beers";
+  $result = $conn->query($sql);
+  ?>
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Ølsmakerorkesteret</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/">Hjem</a></li>
+          <li><a href="/html/tester.php">Tester</a></li>
+          <li class="active"><a href="/html/galleri.php">Galleri</a></li>
+          <li><a href="https://github.com/anderssh/anderssh.github.io">Kildekode</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <div class="container">
       <h2>Bildegalleri</h2>
       <div class="row">
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/1.jpg" target="_blank">
-              <img src="/img/2018/jul/1.jpg" alt="Lights" style="width:100%">
-              <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/2.jpg" target="_blank">
-              <img src="/img/2018/jul/2.jpg" alt="Nature" style="width:100%">
-              <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/3.jpg" target="_blank">
-              <img src="/img/2018/jul/3.jpg" alt="Fjords" style="width:100%">
-              <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/4.jpg" target="_blank">
-              <img src="/img/2018/jul/4.jpg" alt="Fjords" style="width:100%">
-               <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/5.jpg" target="_blank">
-              <img src="/img/2018/jul/5.jpg" alt="Fjords" style="width:100%">
-                <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/6.jpg" target="_blank">
-              <img src="/img/2018/jul/6.jpg" alt="Lights" style="width:100%">
-              <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/7.jpg" target="_blank">
-              <img src="/img/2018/jul/7.jpg" alt="Nature" style="width:100%">
-              <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/8.jpg" target="_blank">
-              <img src="/img/2018/jul/8.jpg" alt="Fjords" style="width:100%">
-              <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/9.jpg" target="_blank">
-              <img src="/img/2018/jul/9.jpg" alt="Fjords" style="width:100%">
-                <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/10.jpg" target="_blank">
-              <img src="/img/2018/jul/10.jpg" alt="Fjords" style="width:100%">
-                <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/11.jpg" target="_blank">
-              <img src="/img/2018/jul/11.jpg" alt="Lights" style="width:100%">
-              <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/12.jpg" target="_blank">
-              <img src="/img/2018/jul/12.jpg" alt="Nature" style="width:100%">
-              <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/13.jpg" target="_blank">
-              <img src="/img/2018/jul/13.jpg" alt="Fjords" style="width:100%">
-              <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/14.jpg" target="_blank">
-              <img src="/img/2018/jul/14.jpg" alt="Fjords" style="width:100%">
-                <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/15.jpg" target="_blank">
-              <img src="/img/2018/jul/15.jpg" alt="Fjords" style="width:100%">
-                <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/16.jpg" target="_blank">
-              <img src="/img/2018/jul/16.jpg" alt="Lights" style="width:100%">
-              <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/17.jpg" target="_blank">
-              <img src="/img/2018/jul/17.jpg" alt="Nature" style="width:100%">
-              <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/18.jpg" target="_blank">
-              <img src="/img/2018/jul/18.jpg" alt="Fjords" style="width:100%">
-              <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/19.jpg" target="_blank">
-              <img src="/img/2018/jul/19.jpg" alt="Fjords" style="width:100%">
-                <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <a href="/img/2018/jul/20.jpg" target="_blank">
-              <img src="/img/2018/jul/20.jpg" alt="Fjords" style="width:100%">
-                <div class="caption">
-                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-            </a>
-          </div>
-        </div>
+      <?php
+      if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+          echo '<div class="col-md-2">';
+          echo '<div class="thumbnail">';
+          echo "<a href=" . $row["image_url"]. 'target="_blank">';
+          echo "<img src=" . $row["image_url"]. 'alt="Lights" style="width:100%">"';
+          echo '<div class="caption">';
+          echo '<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>';
+          echo "</div>";
+          echo "</a>";
+          echo "</div>";
+          echo "</div>";
+        }
+      } else {
+        echo "0 results";
+      }
+      ?>
       </div>
     </div>
   </body>
 </html>
-
-
