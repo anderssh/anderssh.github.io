@@ -78,7 +78,7 @@ $result = $conn->query($sql);
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
                   echo "<tr>";
-                  echo "<td>" . $row["beer_name"]. "<td></td>". $row["score"]. "</td>";
+                  echo "<td>" . $row["beer_name"]. "</td><td>". $row["score"]. "</td>";
                   echo "<\tr>";
                 }
             } else {
