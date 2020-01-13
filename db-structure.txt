@@ -1,0 +1,33 @@
+
+// Creating tables
+Table tests{
+  id int [pk, increment] // auto-increment
+  year INT
+  beer_id
+  score float
+  volume float
+  event varchar
+  full_name varchar
+  description varchar
+  color varchar
+}
+
+Table beers {
+  id int [pk]
+  beer_name varchar
+  volume float
+  alcohol_content float
+  url text
+}
+
+// Creating references
+// You can also define relaionship separately
+// > many-to-one; < one-to-many; - one-to-one
+Ref: tests.beer_id < beers.id  
+
+//----------------------------------------------//
+
+//// -- LEVEL 2
+//// -- Adding column settings
+
+//----------------------------------------------//
