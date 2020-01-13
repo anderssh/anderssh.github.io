@@ -72,7 +72,7 @@ $result = $conn->query($sql);
                 while($row = $result->fetch_assoc()) {
                   echo "<tr>";
                   echo "<td>" . $row["beer_name"]. "</td><td>". $row["score"]. "</td>";
-                  echo "<\tr>";
+                  echo "</tr>";
                 }
               } else {
                 echo "0 results";
