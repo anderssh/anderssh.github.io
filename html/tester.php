@@ -42,8 +42,6 @@ $result = $conn->query($sql);
           </button>
           <a class="navbar-brand" href="/">Ølsmakerorkesteret</a>
         </div>
-      </div>
-      <div class="container">
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="/">Hjem</a></li>
