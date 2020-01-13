@@ -51,17 +51,6 @@ $result = $conn->query($sql);
             <li><a href="/html/galleri.html">Galleri</a></li>
           </ul>
         </div><!--/.nav-collapse -->
-      </div>
-      <div class="container">
-        <li class="active"><a href="/html/tester.html">Tester</a></li>
-        <li><a href="https://github.com/anderssh/anderssh.github.io">Kildekode</a></li>
-        <li><a href="/html/galleri.html">Galleri</a></li>
-      </div>
-      <div class="container">
-        <li class="active"><a href="/html/tester.html">Tester</a></li>
-        <li><a href="https://github.com/anderssh/anderssh.github.io">Kildekode</a></li>
-        <li><a href="/html/galleri.html">Galleri</a></li>
-      </div>
     </nav>
     <div class="container">
       <h2 class="ingress">Her finner du alle nedskrevne øltester utført av Ølsmakerorkesteret</h2>
