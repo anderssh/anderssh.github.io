@@ -41,6 +41,8 @@ $result = $conn->query($sql);
           </button>
           <a class="navbar-brand" href="/">Ølsmakerorkesteret</a>
         </div>
+      </div>
+      <div class="container">
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="/">Hjem</a></li>
@@ -54,7 +56,7 @@ $result = $conn->query($sql);
         <li class="active"><a href="/html/tester.html">Tester</a></li>
         <li><a href="https://github.com/anderssh/anderssh.github.io">Kildekode</a></li>
         <li><a href="/html/galleri.html">Galleri</a></li>
-        </div>
+      </div>
       <div class="container">
         <li class="active"><a href="/html/tester.html">Tester</a></li>
         <li><a href="https://github.com/anderssh/anderssh.github.io">Kildekode</a></li>
