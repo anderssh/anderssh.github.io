@@ -46,8 +46,8 @@ $result = $conn->query($sql);
           <ul class="nav navbar-nav">
             <li><a href="/">Hjem</a></li>
             <li class="active"><a href="/html/tester.html">Tester</a></li>
-            <li><a href="https://github.com/anderssh/anderssh.github.io">Kildekode</a></li>
             <li><a href="/html/galleri.html">Galleri</a></li>
+            <li><a href="https://github.com/anderssh/anderssh.github.io">Kildekode</a></li>
           </ul>
         </div>
       </div>
