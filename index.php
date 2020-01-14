@@ -28,8 +28,8 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="/">Hjem</a></li>
             <li><a href="/html/tester.php">Tester</a></li>
-            <li><a href="https://github.com/anderssh/anderssh.github.io">Kildekode</a></li>
             <li><a href="/html/galleri.php">Galleri</a></li>
+            <li><a href="https://github.com/anderssh/anderssh.github.io">Kildekode</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
