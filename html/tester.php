@@ -58,7 +58,7 @@ $result = $conn->query($sql);
       <div class="content">
         <div class="row">
           <div class="col-md-8">
-            <table>
+            <table id="myTable">
               <tr>
                 <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
                 <th onclick="sortTable(0)"><i class="fas fa-beer"></i>Ølnavn</th>
