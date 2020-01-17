@@ -30,28 +30,9 @@ if ($conn->connect_error) {
 }
 $sql = "SELECT beer_name, score FROM results left join beers on results.beer_id = beers.id";
 $result = $conn->query($sql);
-?>
-    <nav class="navbar navbar-inverse navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">Ølsmakerorkesteret</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="/">Hjem</a></li>
-            <li class="active"><a href="/html/tester.php">Tester</a></li>
-            <li><a href="/html/galleri.php">Galleri</a></li>
-            <li><a href="https://github.com/anderssh/anderssh.github.io">Kildekode</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  $page="tester";
+  include 'navbar.php';
+  ?>
     <div class="container">
       <h2 class="ingress">Her finner du alle nedskrevne øltester utført av Ølsmakerorkesteret</h2>
       <button type="button" class="collapsible">Julen 2018</button>
@@ -67,7 +48,7 @@ $result = $conn->query($sql);
               <?php
               if ($result->num_rows > 0) {
                 // output data of each row
-                while($row = $result->fetch_assoc()) {
+                while($row = $result->fetch_assoc()) {cd 
                   echo "<tr>";
                   echo "<td>" . $row["beer_name"]. "</td><td>". $row["score"]. "</td>";
                   echo "</tr>";
