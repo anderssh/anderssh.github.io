@@ -29,6 +29,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 $sql = "SELECT beer_name, score FROM results left join beers on results.beer_id = beers.id";
+
 $result = $conn->query($sql);
   $page="tester";
   include 'navbar.php';
@@ -48,7 +49,7 @@ $result = $conn->query($sql);
               <?php
               if ($result->num_rows > 0) {
                 // output data of each row
-                while($row = $result->fetch_assoc()) {cd 
+                while($row = $result->fetch_assoc()) { 
                   echo "<tr>";
                   echo "<td>" . $row["beer_name"]. "</td><td>". $row["score"]. "</td>";
                   echo "</tr>";
